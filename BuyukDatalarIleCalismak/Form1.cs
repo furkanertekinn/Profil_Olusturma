@@ -26,11 +26,6 @@ namespace BuyukDatalarIleCalismak
             cmb_kisilistesi.DataSource = Kisiler;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_resimekle_Click(object sender, EventArgs e)
         {
             OFD.ShowDialog();
@@ -51,7 +46,7 @@ namespace BuyukDatalarIleCalismak
             }
             else
             {
-                MessageBox.Show("Başarısız");
+                MessageBox.Show("Başarısız","Uyarı",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 
@@ -61,8 +56,8 @@ namespace BuyukDatalarIleCalismak
             k = BLL.KisiDetayGetir(k.ID);
             txt_dg_isim.Text = k.Isim;
             txt_dg_soyisim.Text = k.Soyisim;
-            txt_eposta.Text = k.EmailAdres;
-            txt_tel.Text = k.Tel;
+            txt_dg_eposta.Text = k.EmailAdres;
+            txt_dg_tel.Text = k.Tel;
 
             MemoryStream mem = new MemoryStream(k.Resim);
             Image Img = Image.FromStream(mem);

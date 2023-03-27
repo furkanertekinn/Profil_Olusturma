@@ -28,13 +28,14 @@ namespace BuyukDatalarIleCalismak.Operasyon
                 Tel = tel,
                 Resim = resim
             };
+
             return dataAccessLayer.KayitEKLE(kisi);
         }
 
         public Kisi KisiDetayGetir(int id)
         {
             Kisi kisi = new Kisi();
-            // Kontrol işlemleri yapabiliriz.
+            // Kontrol işlemlerini yapabiliriz.
 
             SqlDataReader reader = dataAccessLayer.KisiDetayGetir(id);
             while (reader.Read())

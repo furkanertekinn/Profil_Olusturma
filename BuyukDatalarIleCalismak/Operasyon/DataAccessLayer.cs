@@ -36,7 +36,7 @@ namespace BuyukDatalarIleCalismak.Operasyon
                 cmd = new SqlCommand("KisiEkle", con);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Add("@Isim", SqlDbType.NVarChar).Value = kisi.Isim;
-                cmd.Parameters.Add("@Soyiim", SqlDbType.NVarChar).Value = kisi.Soyisim;
+                cmd.Parameters.Add("@Soyisim", SqlDbType.NVarChar).Value = kisi.Soyisim;
                 cmd.Parameters.Add("@EmailAdres", SqlDbType.NVarChar).Value = kisi.EmailAdres;
                 cmd.Parameters.Add("@TelefonNumarasi", SqlDbType.NVarChar).Value = kisi.Tel;
                 cmd.Parameters.Add("@Resim", SqlDbType.VarBinary).Value = kisi.Resim;
